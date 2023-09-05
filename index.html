@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <button type="button" id="button1"> Click Me</button>
+    <script>
+        $("#button1").click(function () {
+            $.ajax({
+                url: "api1.json",
+                method: "GET",
+                success: function (response) {
+                    console.log(response);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
