@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="btn"> Click Me</button>
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "api.json", true);
+            xhr.addEventListener("load", function () {
+                console.log(xhr.response);
+
+                console.log(response);
+            });
+            xhr.send();
+        })
+    </script>
+</body>
+
+</html>

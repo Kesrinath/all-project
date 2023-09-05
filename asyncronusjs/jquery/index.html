@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>my company logo</h1>
+    <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, corrupti.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>suraj</p>
+    <button id="btn" type="button"> click me</button>
+
+    <script>
+        let x = $('p');
+        console.log(x.length);
+        console.log(x[0].innerText);
+        console.log(x[1].innerText);
+        console.log(x[2].innerText);
+        let btn = $("#btn")
+        console.log(btn.text());
+        $("#p1").text("i love myself forever...");
+        $("#p1").css("font-size", "33px");
+        $("#p1").css("color", "red");
+        $("#p1").css("background-color", "black");
+        $("#p1").css("border", "2px solid black");
+        $("#p1").css("padding", "33px");
+
+
+        let p = $("<p></p>")
+        p.text("suraj is an bad compition of himself. ");
+        p.addClass("p1)");
+        $("body").append(p);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+        .container {
+            background-color: #fff;
+            margin: 100px auto;
+            width: 600px;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: -9px 2px 58px -15px rgba(41, 35, 35, 0.75);
+        }
+
+        #header {
+            padding: 1rem;
+        }
+
+        #question {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        li {
+            margin: 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: mediumslateblue;
+            width: 100%;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 1rem;
+
+        }
+
+        button:hover {
+            background-color: mediumblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <h2 id="question">This is Question</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a-option">Option A</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b-option">Option B</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c-option">Option C</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d-option">Option D</label>
+                </li>
+            </ul>
+        </div>
+        <button type="button" id="button">Submit</button>
+    </div>
+
+    <script>
+        const data = [
+
+            {
+                question: "Capital of india",
+                a: "Delhi",
+                b: "Punjab",
+                c: "Uttar Pradesh",
+                d: "Mumbai",
+                correct: "a"
+            },
+            {
+                question: "Capital of Uttar Pradesh",
+                a: "Sultanpur",
+                b: "Lucknow",
+                c: "Uttar Pradesh",
+                d: "Etawah",
+                correct: "b"
+            },
+            {
+                question: " The Name of prime minister of India",
+                a: "Narendra Modi",
+                b: "Rahul Gandhi",
+                c: "Arvind Kejriwal",
+                d: "Kumar Vishwas",
+                correct: "a"
+            },
+            {
+                question: "The name of CM up",
+                a: "Akhilesh Yadav",
+                b: "Tejasvi Yadav",
+                c: "Yogi Aditynath",
+                d: "Bhagwant Maan",
+                correct: "c"
+            },
+            {
+                question: "Capital of Maharastra",
+                a: "delhi",
+                b: "Punjab",
+                c: "Uttar Pradesh",
+                d: "Mumbai",
+                correct: "d"
+            },
+        ]
+        let question = document.getElementById("question");
+        let a = document.getElementById("a-option");
+        let b = document.getElementById("b-option");
+        let c = document.getElementById("c-option");
+        let d = document.getElementById("d-option");
+        let answer = document.getElementsByClassName("answer");
+        let quiznumber = 0;
+        let score = 0;
+        function loadQuiz() {
+            for (let i = 0; i < answer.length; i++) {
+                if (answer[i].checked == true) {
+                    answer[i].checked = false;
+                }
+            }
+            question.innerText = data[quiznumber]["question"];
+            a.innerText = data[quiznumber]["a"];
+            b.innerText = data[quiznumber]["b"];
+            c.innerText = data[quiznumber]["c"];
+            d.innerText = data[quiznumber]["d"];
+        }
+        loadQuiz();
+        let button = document.getElementById("button");
+        button.addEventListener("click", function () {
+            let useranswer = 0;
+            for (let i = 0; i < answer.length; i++) {
+                if (answer[i].checked == true) {
+                    useranswer = answer[i].id;
+                }
+            }
+
+            if (useranswer) {
+                if (useranswer == data[quiznumber]["correct"]) {
+                    score++;
+                }
+
+                quiznumber++;
+                if (quiznumber < data.length) {
+                    loadQuiz();
+                }
+                else {
+                    let header = document.getElementById('header');
+
+                    header.innerHTML = `
+        <h1> Your Score ${score} out of ${data.length} </h1>
+      `;
+
+                    button.innerText = "Reload your Quiz"
+                    button.style.fontSize = "16px"
+                }
+            }
+            else {
+                alert("please select atleast one")
+            }
+        }
+        );
+    </script>
+</body>
+
+</html>

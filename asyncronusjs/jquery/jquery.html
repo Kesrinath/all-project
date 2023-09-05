@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        img {
+            height: 400px;
+            width: 400px;
+            border-radius: 50px;
+            position: relative;
+            left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, corrupti.</p>
+
+    <img id="pic"
+        src="https://images.pexels.com/photos/360177/pexels-photo-360177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="">
+    <script>
+        $("#p1").text("i love myself forever...");
+        $("#p1").css("font-size", "33px");
+        $("#p1").css("color", "red");
+        $("#p1").css("background-color", "black");
+        $("#p1").css("border", "2px solid black");
+        $("#p1").css("padding", "23px");
+
+        let flag = tue;
+        setInterval(function () {
+            if (flag) {
+                $("#pic").show();
+                flag = false;
+            }
+            else {
+                $("#pic").hide();
+                flag = true;
+            }
+
+        }, 500);
+
+        let p = $("<p></p>")
+        p.text("suraj is an bad compition of himself. ");
+        p.addClass("p1)");
+        $("body").append(p);
+
+    </script>
+</body>
+
+</html>
