@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="music.css">
+    <script src="https://kit.fontawesome.com/4de668bd9c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Music Player</h1>
+        <div class="player">
+            <audio id="audioPlayer" controls></audio>
+
+            <div class="audio-controls">
+                <button id="prevButton"><i class="fas fa-backward"></i> Prev</button>
+                <button id="playButton"><i class="fas fa-play"></i> Play</button>
+                <button id="nextButton"><i class="fas fa-forward"></i> Next</button>
+                <button id="popup-btn">Show Fav</button>
+            </div>
+
+        </div>
+        <ul id="playlist">
+            <li id="s1" data-src="./musicsong/krishnaflu-wpaplrpy-2959.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 1 Manmohana </li>
+            <button id="1" type="button" class="fav">❤️</button>
+
+
+            <li id="s2" data-src="./musicsong/krishnanew-plt8dqm3-17667.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 2 Radhekrishna ki jyoti alokik </li> <button id="2" class="fav">❤️</button>
+
+
+            <li id="s3" data-src="./musicsong/omg-flute-ringtone-51510.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 3 OMG flute </li> <button id="3" class="fav">❤️</button>
+
+
+            <li id="s4" data-src="./musicsong/ram-siya-ram-sachet-tandon-57749.mp3"><i class="fas fa-music"></i> &nbsp;
+                &nbsp; Song 4 Ram siya Ram </li> <button id="4" class="fav">❤️</button>
+
+            <li id="s5" data-src="./musicsong/krishnaflu-wpaplrpy-2959.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 5 Manmohana </li>
+            <button id="5" type="button" class="fav">❤️</button>
+
+
+            <li id="s6" data-src="./musicsong/krishnanew-plt8dqm3-17667.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 6 Radhekrishna ki jyoti alokik </li> <button id="6" class="fav">❤️</button>
+            <li id="s7" data-src="./musicsong/krishnaflu-wpaplrpy-2959.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 7 Manmohana</li>
+            <button id="7" type="button" class="fav">❤️</button>
+
+
+            <li id="s8" data-src="./musicsong/krishnanew-plt8dqm3-17667.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 8 Radhekrishna ki jyoti alokik </li> <button id="8" class="fav">❤️</button>
+
+
+            <li id="s9" data-src="./musicsong/omg-flute-ringtone-51510.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 9 OMG flute </li> <button id="9" class="fav">❤️</button>
+
+
+            <li id="10" data-src="./musicsong/ram-siya-ram-sachet-tandon-57749.mp3"><i class="fas fa-music"></i> &nbsp;
+                &nbsp; Song 10 Ram siya Ram </li> <button id="10" class="fav">❤️</button>
+            <li id="s11" data-src="./musicsong/krishnaflu-wpaplrpy-2959.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 11 Manmohana </li>
+            <button id="11" type="button" class="fav">❤️</button>
+
+
+            <li id="s12" data-src="./musicsong/krishnanew-plt8dqm3-17667.mp3"><i class="fas fa-music"></i> &nbsp; &nbsp;
+                Song 12 Ram siya Ram </li> <button id="12" class="fav">❤️</button>
+        </ul>
+        <div id="popup-overlay">
+            <div id="popup-content">
+                <h2>Your Fav. List</h2>
+                <div id="song-list">
+                    <p>No Love</p>
+                </div>
+                <button id="popup-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="music.js"></script>
+</body>
+
+</html>

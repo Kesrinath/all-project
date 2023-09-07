@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - your favroite music are here !</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li class="brand"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify">Spotify</li>
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Best of NCS- No Copyright Song </h1>
+    <audio id="audioPlayers"></audio>
+    <div class="songlist">
+      <div class="songItemcontainer">
+        <div class="songItem">
+          <img src="https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000"
+            width="70px" alt="1">
+          <span>Krishna flute</span>
+          <span data-src="./musicsong/krishnaflu-wpaplrpy-2959.mp3" class="songlistplay"><span class="timestamp">00:34
+              <i class=" fa-regular fa-circle-play"></i></span></span>
+        </div>
+      </div>
+      <div class="songItemcontainer">
+        <div class="songItem">
+          <img src="https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000"
+            width="70px" alt="1">
+          <span> RadheKrishna ki jyoti alokik</span>
+          <span data-src="./musicsong/krishnanew-plt8dqm3-17667.mp3" class="songlistplay"><span class="timestamp">00:34
+              <i class=" fa-regular fa-circle-play"></i></span></span>
+        </div>
+      </div>
+      <div class="songItemcontainer">
+        <div class="songItem">
+          <img src="https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000"
+            width="70px" alt="1">
+          <span>omg flute</span>
+          <span data-src="./musicsong/omg-flute-ringtone-51510.mp3" class="songlistplay"><span class="timestamp">00:34
+              <i class=" fa-regular fa-circle-play"></i></span></span>
+        </div>
+      </div>
+      <div class="songItemcontainer">
+        <div class="songItem">
+          <img src="https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000"
+            width="70px" alt="1">
+          <span>Ram siya ram</span>
+          <span data-src="./musicsong/ram-siya-ram-sachet-tandon-57749.mp3" class="songlistplay"><span
+              class="timestamp">00:34 <i class=" fa-regular fa-circle-play"></i></span></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="songbaner"></div>
+  </div>
+  <div class="bottom">
+    <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+    <div class="icons">
+      <!--fontawesome icons-->
+      <i class=" fa-2x fa-solid fa-backward"></i>
+      <i class="fa-3x fa-regular fa-play-circle" id="masterPlay"></i>
+      <i class="fa-2x fa-solid fa-forward"></i>
+    </div>
+  </div>
+  <script src="Spotify.js"></script>
+  <script src="https://kit.fontawesome.com/1be7f9558a.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
